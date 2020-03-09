@@ -3,7 +3,7 @@ import { useCriminals } from "./criminalsDataProvider.js"
 
 const contentTarget = document.querySelector(".criminalsContainer")
 
-export const criminalList = () => {
+export const CriminalList = () => {
     const arrayOfCriminalObjects = useCriminals()
 
     for (const criminalObject of arrayOfCriminalObjects) {

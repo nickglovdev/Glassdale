@@ -1,0 +1,19 @@
+.criminalsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-evenly;
+}
+
+.criminal__profile {
+    flex-basis: 26%;
+    border: 1px solid black;
+    padding: 8px;
+    margin-bottom: 20px;
+
+}
+
+.criminal__list {
+    list-style: none;
+    padding: 0;
+}
