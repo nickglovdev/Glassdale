@@ -1,0 +1,22 @@
+{
+  "notes": [
+    {
+      "id": 1,
+      "noteText": "This person seems suspicious",
+      "timestamp": 1584382255712,
+      "criminal": "Taurean Bins"
+    },
+    {
+      "noteText": "Testing",
+      "criminal": "Criminal",
+      "timestamp": 1584388933177,
+      "id": 2
+    },
+    {
+      "noteText": "This person didn't seem write",
+      "criminal": "James James",
+      "timestamp": 1584389791295,
+      "id": 3
+    }
+  ]
+}
