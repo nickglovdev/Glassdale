@@ -7,6 +7,7 @@ export const Note = (noteObject, criminal) => {
             </header>
             <p>${noteObject.noteText}</p>
             <p>${new Date(noteObject.timestamp).toLocaleDateString()}</p>
+            <button id="deleteNote--${noteObject.id}">Delete</button>
         </section>
     `
 }
