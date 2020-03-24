@@ -1,4 +1,4 @@
-import { getNotes, useNotes } from "./NotesProvider.js"
+import { getNotes, useNotes, deleteNote } from "./NotesProvider.js"
 import { Note } from "./Note.js"
 import { useCriminals } from "../criminals/CriminalProvider.js"
 
@@ -7,24 +7,8 @@ const eventHub = document.querySelector(".container")
 
 contentTarget.addEventListener("click", clickEvent => {
     if (clickEvent.target.id.startsWith("deleteNote--")) {
-        // Get the id of the criminal that was clicked
-        const [prefix, criminalId] = clickEvent.target.id.split("--")
-
-        // Yell at the system that a known associates button was clicked
-        const deleteNote = new CustomEvent("knownNoteClicked", {
-            // Make sure to tell the system exactly which criminal button was clicked
-            detail: {
-                chosenCriminal: criminalId
-            }
-        })
-        deleteNote(id).then(
-            () => {
-                const updatedNotes = useNotes()
-                render(updatedNotes())
-            }
-        )
-
-        eventHub.dispatchEvent(deleteNote)
+        const [prefix, noteId] = clickEvent.target.id.split("--")
+        deleteNote(noteId)
     }
 })
 
